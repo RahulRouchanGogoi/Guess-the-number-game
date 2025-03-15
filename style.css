@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #121212;
+}
+
+.inner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  height: 450px;
+  background-color: #1e1e1e;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Animation */
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.inner-box::after,
+.inner-box::before {
+  content: "";
+  position: absolute;
+  height: 100%; /* Slightly larger */
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 0deg 30deg,
+    /* Initial gap */ #ffd700 30deg 90deg,
+    /* Red segment */ transparent 90deg 180deg,
+    /* Gap after red */ #00d8ff 180deg 240deg,
+    /* Blue segment on opposite side */ transparent 240deg 360deg
+      /* Remaining gap */
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.inner-box::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Main Game body*/
+
+.header {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.header h1 {
+  color: #ffd700;
+}
+
+.header p {
+  color: grey;
+  font-size: 0.85rem;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.3rem;
+  width: 2.8rem;
+  background-color: #e0e0e0;
+  font-family: "Press Start 2P", cursive;
+  margin-top: -1rem;
+}
+
+/*Line*/
+.line {
+  display: flex;
+  justify-content: center;
+  height: 0.2rem;
+  background-color: #e0e0e0;
+  width: 100%;
+}
+
+/*main*/
+
+.main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 53%;
+  height: 150px;
+  border: 1px dotted #e0e0e0;
+}
+
+.guess {
+  height: 35px;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-family: "Press Start 2P", cursive;
+}
+
+.guess::-webkit-inner-spin-button {
+  width: 30px; /* Increase width */
+  height: 30px; /* Increase height */
+}
+
+.message {
+  margin-top: 1rem;
+  padding-bottom: 10px;
+  font-size: 0.85rem;
+  color: #ffd700;
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: 1.1rem;
+}
+
+.check {
+  font-family: "Press Start 2P", cursive;
+  margin-top: 1rem;
+  font-size: 0.4rem;
+  border: 2px solid #ffd700;
+  background-color: #007bff;
+  color: #e0e0e0;
+}
+
+.btn {
+  height: 25px;
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+}
+
+/*end*/
+
+.end {
+  margin-top: 1rem;
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 120px;
+  color: #ffd700;
+  font-size: 0.85rem;
+}
+
+.again {
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.4rem;
+  background-color: #50c878;
+}
+
+/*wrap*/
+
+.wrap {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  height: 300px;
+  margin-bottom: 0.6rem;
+}
+
+/*image*/
+
+.image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  width: 100%;
+  height: 150px;
+}
+
+.yay-image-left {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.yay-image-right {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
