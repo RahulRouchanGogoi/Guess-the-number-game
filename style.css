@@ -148,10 +148,14 @@ body {
 .check {
   font-family: "Press Start 2P", cursive;
   margin-top: 1rem;
-  font-size: 0.4rem;
+  font-size: 0.5rem;
   border: 2px solid #ffd700;
   background-color: #007bff;
   color: #e0e0e0;
+}
+
+.check:hover {
+  border: 1.7px solid #e0e0e0;
 }
 
 .btn {
@@ -179,6 +183,10 @@ body {
   font-family: "Press Start 2P", cursive;
   font-size: 0.4rem;
   background-color: #50c878;
+}
+
+.again:hover {
+  border: 1.7px solid #e0e0e0;
 }
 
 /*wrap*/
