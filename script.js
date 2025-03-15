@@ -6,7 +6,7 @@ let gameOver = false;
 document.querySelector(".check").addEventListener("click", function () {
   if (gameOver) return;
   const guess = Number(document.querySelector(".guess").value);
-  if (!guess) {
+  if (!guess || guess < 0 || guess > 20) {
     const messageElement = document.querySelector(".message");
     messageElement.textContent = "⛔ Enter a valid guess!";
     messageElement.style.color = "#FF3B3B";
@@ -65,9 +65,10 @@ document.querySelector(".again").addEventListener("click", function () {
   randomNo = Math.trunc(Math.random() * 20) + 1;
   score = 0;
   document.querySelector(".message").textContent = "Start guessing...!";
+  document.querySelector(".message").style.color = "#ffd700";
   document.querySelector(".number").textContent = "?";
   document.querySelector(".guess").value = "";
-  document.querySelector(".score").textContent = score;
+  document.querySelector(".score").textContent = " " + score;
   document.querySelector(".yay-image-right").style.backgroundImage = "none";
   document.querySelector(".yay-image-left").style.backgroundImage = "none";
   document.querySelector(".main").style.backgroundColor = "#1e1e1e";
