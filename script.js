@@ -12,6 +12,7 @@ document.querySelector(".check").addEventListener("click", function () {
     messageElement.style.color = "#FF3B3B";
   } else if (guess === randomNo) {
     score++;
+    document.querySelector(".message").style.color = "#ffd700";
     const messageElement = document.querySelector(".message");
     messageElement.textContent = "✅ Correct Guess!";
     document.querySelector(".number").textContent = randomNo;
@@ -30,6 +31,7 @@ document.querySelector(".check").addEventListener("click", function () {
     gameOver = true;
   } else if (guess > randomNo) {
     if (score < 20) {
+      document.querySelector(".message").style.color = "#ffd700";
       document.querySelector(".message").textContent = "⬆️ Guess is high!";
       score++;
       document.querySelector(".score").textContent = " " + score;
@@ -45,6 +47,7 @@ document.querySelector(".check").addEventListener("click", function () {
     }
   } else if (guess < randomNo) {
     if (score < 20) {
+      document.querySelector(".message").style.color = "#ffd700";
       document.querySelector(".message").textContent = "⬇️ Guess is Low!";
       score++;
       document.querySelector(".score").textContent = " " + score;
