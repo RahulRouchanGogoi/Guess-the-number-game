@@ -142,7 +142,9 @@ body {
   font-size: 0.85rem;
   color: #ffd700;
   font-family: "Press Start 2P", cursive;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  line-height: 15px;
 }
 
 .check {
