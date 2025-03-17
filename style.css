@@ -154,10 +154,16 @@ body {
   border: 2px solid #ffd700;
   background-color: #007bff;
   color: #e0e0e0;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
 .check:hover {
   border: 1.7px solid #e0e0e0;
+}
+
+.check:active {
+  background-color: #0056b3; /* Slightly darker blue when clicked */
+  transform: scale(0.95); /* Adds a subtle pressing effect */
 }
 
 .btn {
@@ -183,14 +189,21 @@ body {
 
 .again {
   font-family: "Press Start 2P", cursive;
-  font-size: 0.4rem;
+  font-size: 0.38rem;
   background-color: #50c878;
+  color: white;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out,
+    border 0.2s ease-in-out;
 }
 
 .again:hover {
   border: 1.7px solid #e0e0e0;
 }
 
+.again:active {
+  background-color: #3aa96e; /* Darker green when clicked */
+  transform: scale(0.95); /* Slightly shrinks the button when clicked */
+}
 /*wrap*/
 
 .wrap {
