@@ -17,9 +17,9 @@ Real-time feedback such as **"Too High"**, **"Too Low"**, or **"Correct!"** help
 - Retro-inspired, simple UI.
 - Random number generation between 1 and 20.
 - Real-time hints: *Too High*, *Too Low*, *Correct!*.
-- Score tracking that decreases with each wrong guess.
-- Highscore stored in `localStorage` to persist between sessions.
-- Reset / Play Again button to restart the game.
+- Score increases with every guess made.
+- Highscore is tracked as the **minimum number of guesses** required to correctly guess the number.
+- Reset / Play Again button to restart the game with a new random number.
 
 ---
 
